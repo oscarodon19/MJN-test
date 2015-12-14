@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
+    <classes>
+      <class name="testcases.CostosBudgetRompeFiltro"/>
+    </classes>
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="testcases.CostosBudgetRompeFiltro">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="costosBudgetSeteoCampoDescripcion1"/>
+          <include name="costosBudgetSeteoBloqueadoSi"/>
+          <include name="costosBudgetSeteoCampoDescripcion3"/>
+          <include name="beforeMethod"/>
+          <include name="costosBudgetSeteoCampoAnio1"/>
+          <include name="testLoginUserValidoAdmin"/>
+          <include name="costosBudgetSeteoCampoDescripcion2"/>
+          <include name="costosBudgetSeteoBloqueadoNo"/>
+        </methods>
+      </class> <!-- testcases.CostosBudgetRompeFiltro -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
