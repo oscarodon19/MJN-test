@@ -12,13 +12,14 @@
         <methods>
           <include name="afterMethod"/>
           <include name="costosBudgetSeteoCampoDescripcion1"/>
-          <include name="costosBudgetSeteoBloqueadoSi"/>
+          <include name="costosBudgetSeteoCampoDescripcion4"/>
           <include name="costosBudgetSeteoCampoDescripcion3"/>
           <include name="beforeMethod"/>
+          <include name="costosBudgetSeteoCampoAnio3"/>
           <include name="costosBudgetSeteoCampoAnio1"/>
           <include name="testLoginUserValidoAdmin"/>
+          <include name="costosBudgetSeteoCampoAnio2"/>
           <include name="costosBudgetSeteoCampoDescripcion2"/>
-          <include name="costosBudgetSeteoBloqueadoNo"/>
         </methods>
       </class> <!-- testcases.CostosBudgetRompeFiltro -->
     </classes>

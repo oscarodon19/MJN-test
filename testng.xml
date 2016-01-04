@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" >
-  <test name="Test">
+  <test name="Login">
     <classes>
       <class name="testcases.Login"/>
     </classes>
   </test> <!-- Test -->
-    <test name="Test2">
+  <test name="PruebaDeUrls">
     <classes>
-      <class name="testcases.Urls"/>
+      <class name="testcases.PruebaDeUrls"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="CostosBudgetRompeFiltro">
+    <classes>
+      <class name="testcases.CostosBudgetRompeFiltro"/>
     </classes>
   </test> <!-- Test -->
   

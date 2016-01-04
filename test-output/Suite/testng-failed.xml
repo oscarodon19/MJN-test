@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test">
+  <test name="Login">
     <classes>
       <class name="testcases.Login"/>
     </classes>
-  </test> <!-- Test -->
-  <test name="Test2">
+  </test> <!-- Login -->
+  <test name="PruebaDeUrls">
     <classes>
-      <class name="testcases.Login2"/>
+      <class name="testcases.PruebaDeUrls"/>
     </classes>
-  </test> <!-- Test2 -->
-  <test name="Test(failed)">
+  </test> <!-- PruebaDeUrls -->
+  <test name="CostosBudgetRompeFiltro">
     <classes>
-      <class name="testcases.Login2">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- testcases.Login2 -->
-      <class name="testcases.Login">
-        <methods>
-          <include name="testLoginUserInvalidoAdm2"/>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-          <include name="testLoginUserInvalidoCaracteresRaros"/>
-          <include name="testLoginUserInvalidoAdmin2"/>
-        </methods>
-      </class> <!-- testcases.Login -->
+      <class name="testcases.CostosBudgetRompeFiltro"/>
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- CostosBudgetRompeFiltro -->
 </suite> <!-- Failed suite [Suite] -->
