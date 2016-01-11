@@ -56,7 +56,5 @@
 	<classpathentry kind="lib" path="C:/selenium-2.48.2/libs/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="lib" path="C:/selenium-2.48.2/selenium-java-2.48.2.jar"/>
 	<classpathentry kind="lib" path="C:/selenium-2.48.2/selenium-java-2.48.2-srcs.jar"/>
-	<classpathentry kind="lib" path="C:/Users/oodon/Desktop/selenium-2.48.2/selenium-java-2.48.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/oodon/Desktop/selenium-2.48.2/selenium-java-2.48.2-srcs.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

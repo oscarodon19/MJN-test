@@ -1,4 +1,4 @@
-package testcases;
+package firefoxPruebas;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;

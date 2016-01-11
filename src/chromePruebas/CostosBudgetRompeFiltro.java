@@ -1,11 +1,11 @@
-package testcases;
-//tuvi
+package chromePruebas;
+
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
@@ -15,7 +15,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 
 public class CostosBudgetRompeFiltro {
-	/*prueba*/
+
 	public WebDriver driver;
 
 	@Test
@@ -25,7 +25,7 @@ public class CostosBudgetRompeFiltro {
 	    driver.findElement(By.id("mtusuarios-username")).sendKeys("admin");
 	    driver.findElement(By.id("mtusuarios-contrasenia")).sendKeys("admin");
 	    driver.findElement(By.name("login-button")).click();
-	    Thread.sleep(5000);	      
+	    Thread.sleep(5000);
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 
 	      
@@ -158,13 +158,15 @@ public class CostosBudgetRompeFiltro {
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 		
 	}
-	
-	
+
 	@BeforeSuite
 	
 	public void beforeMethod() {
-	
-		driver = new FirefoxDriver();
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Testng/chromedriver.exe");
+		//Recordar copiar el archivo .exe mencionado anteriormente en la carpeta mencionada
+		  
+		driver = new ChromeDriver();
 	  	driver.get("http://192.168.1.21:8082/mdj_test/web/");
 	
 	}
@@ -172,12 +174,13 @@ public class CostosBudgetRompeFiltro {
 	@AfterSuite
 	
 	public void afterMethod() {
-	
 	    driver.quit();
 	
 	}
-
-
+	
+	
+	
+	
 	
 	
 }

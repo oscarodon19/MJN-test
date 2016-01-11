@@ -1,13 +1,13 @@
-package testcases;
+package chromePruebas;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.concurrent.TimeUnit;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 
 public class Login {
 	
@@ -72,28 +72,21 @@ public class Login {
 		
 	}
 	
-	@BeforeMethod
+	@BeforeSuite
 	
 	public void beforeMethod() {
-	
-		// Create a new instance of the Firefox driver
-	
-		driver = new FirefoxDriver();
-	
-		//Put a Implicit wait, this means that any search for elements on the page could take the time the implicit wait is set for before throwing exception
-	
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	
-	  	//Launch the Online Store Website
-	
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Testng/chromedriver.exe");
+		//Recordar copiar el archivo .exe mencionado anteriormente en la carpeta mencionada
+		  
+		driver = new ChromeDriver();
 	  	driver.get("http://192.168.1.21:8082/mdj_test/web/");
 	
 	}
 
-	@AfterMethod
+	@AfterSuite
 	
 	public void afterMethod() {
-	
 	    driver.quit();
 	
 	}
