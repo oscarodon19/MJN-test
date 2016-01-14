@@ -2,8 +2,10 @@ package internetExplorerPruebas;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.BeforeSuite;
 import org.testng.Assert;
@@ -12,7 +14,8 @@ import org.testng.annotations.AfterSuite;
 public class PruebaDeUrls {
 	
 	public WebDriver driver;
-
+	public RemoteWebDriver webDriver;
+	
 	@Test
 	public void testLoginUserValidoAdmin() throws InterruptedException{
 		
@@ -21,27 +24,33 @@ public class PruebaDeUrls {
 	    driver.findElement(By.id("mtusuarios-contrasenia")).sendKeys("admin");
 	    driver.findElement(By.name("login-button")).click();
 	    Thread.sleep(5000);
+	    
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
-	      
 	}
 
 	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
 	public void testVentas(){
-		
-		// Dentro de la sección de /*********Ventas***********/ pruebo todos sus enlaces:		
+		 
+		//WebElement error;
+		//error=webDriver.findElementByClassName("site-error");
+		//Dentro de la sección de /*********Ventas***********/ pruebo todos sus enlaces:		
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ve-ventas-consolidado");//Sancor
-		//driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ve-ventas-consolidado");//Bonificaciones
-	    //driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ve-ventas-consolidado");//Rofina
+		Assert.assertNull(driver.findElement(By.className("site-error"))); /*Buscamos que al entrar 
+		en el link no haya ningún error por eso buscamos la clase padre site-error*/ 
 		
 	}
+	
 	
 	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
 	public void testInventarios(){
 		
 		// Dentro de la sección de /*********Inventarios***********/ pruebo todos sus enlaces:
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-proyeccion-actual");//Actual
+		Assert.assertNotNull(driver.findElement(By.className("site-error"))); /*Buscamos que al entrar 
+		en el link no haya ningún error por eso buscamos la clase padre site-error*/ 
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-proyeccion-budget");//Budget
-		
+		Assert.assertNotNull(driver.findElement(By.className("site-error"))); /*Buscamos que al entrar 
+		en el link no haya ningún error por eso buscamos la clase padre site-error*/ 
 	}
 	
 	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
@@ -54,7 +63,8 @@ public class PruebaDeUrls {
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-canales");//Canales
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-clientes");//Clientes
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-codigo-postal");//Cod postales
-		
+		Assert.assertNull(driver.findElement(By.className("site-error"))); /*Buscamos que al entrar 
+		en el link no haya ningún error por eso buscamos la clase padre site-error*/ 
 	}
 		
 	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
@@ -67,7 +77,8 @@ public class PruebaDeUrls {
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-prj-q1");//PRJ Q1
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-prj-q2");//PRJ Q2
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-prj-q3");//PRJ Q3
-		
+		Assert.assertNull(driver.findElement(By.className("site-error"))); /*Buscamos que al entrar 
+		en el link no haya ningún error por eso buscamos la clase padre site-error*/ 
 	}
 	
 	
@@ -76,7 +87,8 @@ public class PruebaDeUrls {
 		
 		// Dentro de la sección de /*********Drivers***********/ pruebo todos sus enlaces:
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-drivers");//Drivers
-		
+		Assert.assertNull(driver.findElement(By.className("site-error"))); /*Buscamos que al entrar 
+		en el link no haya ningún error por eso buscamos la clase padre site-error*/ 
 	}
 	
 	
@@ -85,7 +97,8 @@ public class PruebaDeUrls {
 		
 		// Dentro de la sección de /*********Presentaciones***********/ pruebo todos sus enlaces:
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-presentaciones");//Presentaciones
-		
+		Assert.assertNull(driver.findElement(By.className("site-error"))); /*Buscamos que al entrar 
+		en el link no haya ningún error por eso buscamos la clase padre site-error*/ 
 	}
 	
 	
@@ -94,7 +107,8 @@ public class PruebaDeUrls {
 		
 		// Dentro de la sección de /*********Brand Codes***********/ pruebo todos sus enlaces:
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-brand-codes");//Brand Codes
-		
+		Assert.assertNull(driver.findElement(By.className("site-error"))); /*Buscamos que al entrar 
+		en el link no haya ningún error por eso buscamos la clase padre site-error*/ 
 	}
 	
 	
@@ -103,7 +117,8 @@ public class PruebaDeUrls {
 		
 		// Dentro de la sección de /*********Categorias***********/ pruebo todos sus enlaces:
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-categorias");//Categorias
-		
+		Assert.assertNull(driver.findElement(By.className("site-error"))); /*Buscamos que al entrar 
+		en el link no haya ningún error por eso buscamos la clase padre site-error*/ 
 	}
 	
 	
@@ -113,7 +128,8 @@ public class PruebaDeUrls {
 		// Dentro de la sección de /*********Mgn Class***********/ pruebo todos sus enlaces:
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-mgn-class-i");//Mgn Class I
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-mgn-class-i-i");//Mgn Class II
-		
+		Assert.assertNull(driver.findElement(By.className("site-error"))); /*Buscamos que al entrar 
+		en el link no haya ningún error por eso buscamos la clase padre site-error*/ 
 	}
 	
 	
