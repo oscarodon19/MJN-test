@@ -3,26 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="internetExplorerPruebas.CostosBudgetRompeFiltro"/>
-    </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="internetExplorerPruebas.CostosBudgetRompeFiltro">
+      <class name="chromePruebas.Login">
         <methods>
           <include name="testLoginUserValidoAdmin"/>
-          <include name="costosBudgetSeteoCampoAnio1"/>
-          <include name="costosBudgetSeteoCampoDescripcion1"/>
-          <include name="costosBudgetSeteoCampoAnio2"/>
-          <include name="costosBudgetSeteoBloqueadoNo"/>
-          <include name="costosBudgetSeteoCampoAnio3"/>
-          <include name="costosBudgetSeteoBloqueadoSi"/>
-          <include name="beforeMethod"/>
-          <include name="costosBudgetSeteoCampoDescripcion4"/>
-          <include name="costosBudgetSeteoCampoDescripcion2"/>
-          <include name="costosBudgetSeteoCampoDescripcion3"/>
         </methods>
-      </class> <!-- internetExplorerPruebas.CostosBudgetRompeFiltro -->
+      </class> <!-- chromePruebas.Login -->
     </classes>
-  </test> <!-- Default test(failed) -->
+  </test> <!-- Default test -->
 </suite> <!-- Failed suite [Default suite] -->
