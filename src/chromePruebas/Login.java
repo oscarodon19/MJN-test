@@ -17,10 +17,14 @@ public class Login {
 	public void testLoginUserValidoAdmin() throws InterruptedException{
 		
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		//Seteo en blanco los campos por las dudas
+			driver.findElement(By.id("mtusuarios-username")).clear();
+		    driver.findElement(By.id("mtusuarios-contrasenia")).clear();
+	    // Realizo las pruebas
 	    driver.findElement(By.id("mtusuarios-username")).sendKeys("admin");
 	    driver.findElement(By.id("mtusuarios-contrasenia")).sendKeys("admin");
 	    driver.findElement(By.name("login-button")).click();
-	    Thread.sleep(5000);	      
+	    Thread.sleep(3000);	      
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 
 	      
@@ -30,10 +34,14 @@ public class Login {
 	public void testLoginUserInvalidoAdmin2() throws InterruptedException{
 		
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		//Seteo en blanco los campos por las dudas
+			driver.findElement(By.id("mtusuarios-username")).clear();
+		    driver.findElement(By.id("mtusuarios-contrasenia")).clear();
+		// Realizo las pruebas
 	    driver.findElement(By.id("mtusuarios-username")).sendKeys("admin2");
 	    driver.findElement(By.id("mtusuarios-contrasenia")).sendKeys("admin3232");
 	    driver.findElement(By.name("login-button")).click();
-	    Thread.sleep(5000);
+	    Thread.sleep(3000);
 	    Assert.assertEquals(driver.getTitle(), "Login");
 		
 	}
@@ -41,10 +49,14 @@ public class Login {
 	@Test
 	public void testLoginUserInvalidoAdm2() throws InterruptedException{
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		//Seteo en blanco los campos por las dudas
+			driver.findElement(By.id("mtusuarios-username")).clear();
+		    driver.findElement(By.id("mtusuarios-contrasenia")).clear();
+		// Realizo las pruebas
 		driver.findElement(By.id("mtusuarios-username")).sendKeys("adm2");
 	    driver.findElement(By.id("mtusuarios-contrasenia")).sendKeys("ain3232");
 	    driver.findElement(By.name("login-button")).click();
-	    Thread.sleep(5000);
+	    Thread.sleep(3000);
 	    Assert.assertEquals(driver.getTitle(), "Login");
 		
 	}
@@ -52,10 +64,14 @@ public class Login {
 	@Test
 	public void testLoginUserInvalidoEspacioVacio() throws InterruptedException{
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		//Seteo en blanco los campos por las dudas
+			driver.findElement(By.id("mtusuarios-username")).clear();
+		    driver.findElement(By.id("mtusuarios-contrasenia")).clear();
+		// Realizo las pruebas		
 	    driver.findElement(By.id("mtusuarios-username")).sendKeys("");
 	    driver.findElement(By.id("mtusuarios-contrasenia")).sendKeys("");
 	    driver.findElement(By.name("login-button")).click();
-	    Thread.sleep(5000);
+	    Thread.sleep(3000);
 	    Assert.assertEquals(driver.getTitle(), "Login");
 		
 	}
@@ -64,10 +80,15 @@ public class Login {
 	@Test
 	public void testLoginUserInvalidoCaracteresRaros() throws InterruptedException{
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		//Seteo en blanco los campos por las dudas
+			driver.findElement(By.id("mtusuarios-username")).clear();
+		    driver.findElement(By.id("mtusuarios-contrasenia")).clear();
+		// Realizo las pruebas
 	    driver.findElement(By.id("mtusuarios-username")).sendKeys("#$%&\"%&-/-&-/(\")=(-/&%\"$/(/&%$#$%");
 	    driver.findElement(By.id("mtusuarios-contrasenia")).sendKeys("!\"#$%-&$#$#\"%$%\"-$%-$\"%4");
+	    Thread.sleep(8000);
 	    driver.findElement(By.name("login-button")).click();
-	    Thread.sleep(5000);
+	    Thread.sleep(3000);
 	    Assert.assertEquals(driver.getTitle(), "Login");
 		
 	}

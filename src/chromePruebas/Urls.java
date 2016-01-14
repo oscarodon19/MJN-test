@@ -20,57 +20,18 @@ public class Urls {
 	    driver.findElement(By.id("mtusuarios-username")).sendKeys("admin");
 	    driver.findElement(By.id("mtusuarios-contrasenia")).sendKeys("admin");
 	    driver.findElement(By.name("login-button")).click();
-	    Thread.sleep(5000);
+	    Thread.sleep(3000);
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 	      
 	}
+	
+	@Test
+	public void testLoginUserValidoAdmind() throws InterruptedException{
+		
 
-	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
-	public void testVentas(){
-		
-		// Dentro de la sección de /*********Ventas***********/ pruebo todos sus enlaces:		
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ve-ventas-consolidado");//Sancor
-		//driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ve-ventas-consolidado");//Bonificaciones
-	    //driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ve-ventas-consolidado");//Rofina
-		
+	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
+	      
 	}
-	
-	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
-	public void testInventarios(){
-		
-		// Dentro de la sección de /*********Inventarios***********/ pruebo todos sus enlaces:
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-proyeccion-actual");//Actual
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-proyeccion-budget");//Budget
-		
-	}
-	
-	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
-	public void testMaestros(){
-		
-		// Dentro de la sección de /*********Maestros***********/ pruebo todos sus enlaces:
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-productos-sku");//Productos
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-materiales-bom");//Materiales
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ve-alicuotas-iibb");//Alicuotas IIBB
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-canales");//Canales
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-clientes");//Clientes
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-codigo-postal");//Cod postales
-		
-	}
-		
-	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
-	public void testCostos(){
-		
-		// Dentro de la sección de /*********Costos***********/ pruebo todos sus enlaces:
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-actual");//Actual
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-sancor");//STD Sancor
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-budget");//Budget
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-prj-q1");//PRJ Q1
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-prj-q2");//PRJ Q2
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-prj-q3");//PRJ Q3
-		
-	}
-	
-
 	
 	@BeforeSuite
 	

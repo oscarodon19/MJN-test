@@ -25,7 +25,7 @@ public class CostosBudgetRompeFiltro {
 	    driver.findElement(By.id("mtusuarios-username")).sendKeys("admin");
 	    driver.findElement(By.id("mtusuarios-contrasenia")).sendKeys("admin");
 	    driver.findElement(By.name("login-button")).click();
-	    Thread.sleep(5000);
+	    Thread.sleep(3000);
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 
 	      
@@ -50,7 +50,7 @@ public class CostosBudgetRompeFiltro {
 	        }
 	    }
 	    
-	    Thread.sleep(5000);	      
+	    Thread.sleep(3000);	      
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 		
 	}
@@ -74,7 +74,7 @@ public class CostosBudgetRompeFiltro {
 	        }
 	    }
 	    
-	    Thread.sleep(5000);	      
+	    Thread.sleep(3000);	      
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 		
 	}
@@ -86,7 +86,7 @@ public class CostosBudgetRompeFiltro {
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-budget");
 		driver.findElement(By.name("InBudgetsProyecciones[descripcion]")).sendKeys("fadjlfdafdajñ");
 		driver.findElement(By.name("InBudgetsProyecciones[descripcion]")).sendKeys(Keys.ENTER);
-	    Thread.sleep(5000);	      
+	    Thread.sleep(3000);	      
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 		
 	}
@@ -98,7 +98,7 @@ public class CostosBudgetRompeFiltro {
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-budget");
 		driver.findElement(By.name("InBudgetsProyecciones[descripcion]")).sendKeys("232323243434-´+{´+'¿'");
 		driver.findElement(By.name("InBudgetsProyecciones[descripcion]")).sendKeys(Keys.ENTER);
-	    Thread.sleep(5000);	      
+	    Thread.sleep(3000);	      
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 		
 	}
@@ -110,7 +110,7 @@ public class CostosBudgetRompeFiltro {
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-budget");
 		driver.findElement(By.name("InBudgetsProyecciones[descripcion]")).sendKeys("---?'\"fdafafd*¨*¨*");
 		driver.findElement(By.name("InBudgetsProyecciones[descripcion]")).sendKeys(Keys.ENTER);
-	    Thread.sleep(5000);	      
+	    Thread.sleep(3000);	      
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 		
 	}	
@@ -121,7 +121,7 @@ public class CostosBudgetRompeFiltro {
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-budget");
 		driver.findElement(By.name("InBudgetsProyecciones[descripcion]")).sendKeys("");
 		driver.findElement(By.name("InBudgetsProyecciones[descripcion]")).sendKeys(Keys.ENTER);
-	    Thread.sleep(5000);	      
+	    Thread.sleep(3000);	      
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 		
 	}
@@ -132,7 +132,7 @@ public class CostosBudgetRompeFiltro {
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-budget");
 		driver.findElement(By.name("InBudgetsProyecciones[anio]")).sendKeys("2015");
 		driver.findElement(By.name("InBudgetsProyecciones[anio]")).sendKeys(Keys.ENTER);
-	    Thread.sleep(5000);	      
+	    Thread.sleep(3000);	      
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 		
 	}	
@@ -143,7 +143,7 @@ public class CostosBudgetRompeFiltro {
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-budget");
 		driver.findElement(By.name("InBudgetsProyecciones[anio]")).sendKeys("");
 		driver.findElement(By.name("InBudgetsProyecciones[anio]")).sendKeys(Keys.ENTER);
-	    Thread.sleep(5000);	      
+	    Thread.sleep(3000);	      
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 		
 	}	
@@ -154,7 +154,7 @@ public class CostosBudgetRompeFiltro {
 		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-budget");
 		driver.findElement(By.name("InBudgetsProyecciones[anio]")).sendKeys("adffdaf");
 		driver.findElement(By.name("InBudgetsProyecciones[anio]")).sendKeys(Keys.ENTER);
-	    Thread.sleep(5000);	      
+	    Thread.sleep(3000);	      
 	    Assert.assertEquals(driver.getTitle(), "MeadJohnson");
 		
 	}
