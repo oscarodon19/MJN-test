@@ -224,25 +224,19 @@ public class PruebaDeUrls {
 
 	}	
 	
-	
 		
-	
 	///******************************/  
 	//   BEFORE SUITE Y AFTER SUITE
 	///******************************/
 	
-	
-	
+		
 	@BeforeSuite
 	
 	public void beforeMethod() {
 	
 		// Create a new instance of the Firefox driver
-	
 		driver = new FirefoxDriver();
-	
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	
 	  	driver.get("http://192.168.1.21:8082/mdj_test/web/");
 	
 	}

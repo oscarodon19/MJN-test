@@ -1,15 +1,15 @@
-package firefoxPruebas;
+package chromePruebas;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.BeforeSuite;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 
-public class Urls {
+public class Breadcrumbs {
 	
 	public WebDriver driver;
 
@@ -57,18 +57,7 @@ public class Urls {
 		
 	}
 		
-	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
-	public void testCostos(){
-		
-		// Dentro de la sección de /*********Costos***********/ pruebo todos sus enlaces:
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-actual");//Actual
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-sancor");//STD Sancor
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-budget");//Budget
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-prj-q1");//PRJ Q1
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-prj-q2");//PRJ Q2
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-escenarios-prj-q3");//PRJ Q3
-		
-	}
+
 	
 
 	
@@ -76,12 +65,10 @@ public class Urls {
 	
 	public void beforeMethod() {
 	
-		// Create a new instance of the Firefox driver
-	
-		driver = new FirefoxDriver();
-	
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	
+		System.setProperty("webdriver.chrome.driver", "C:/Testng/chromedriver.exe");
+		//Recordar copiar el archivo .exe mencionado anteriormente en la carpeta mencionada
+		  
+		driver = new ChromeDriver();
 	  	driver.get("http://192.168.1.21:8082/mdj_test/web/");
 	
 	}

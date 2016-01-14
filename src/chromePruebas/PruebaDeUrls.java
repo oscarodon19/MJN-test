@@ -54,16 +54,7 @@ public class PruebaDeUrls {
 			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Inventarios - Budget");
 	}
 	
-	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
-	public void testInventariosActualLabels() throws InterruptedException{
-		
-		// Dentro de la sección de /*********Inventarios***********/ pruebo todos sus enlaces:
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-proyeccion-actual");//Actual
-			Thread.sleep(5000);
-			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Inventarios - Actual");
 
-	}
-	
 	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
 	public void testMaestros() throws InterruptedException{
 		
@@ -148,17 +139,6 @@ public class PruebaDeUrls {
 	
 	
 	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
-	public void testCategoriasLabel() throws InterruptedException{
-		
-		// Dentro de la sección de /*********Categorias***********/ pruebo todos sus enlaces:
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-categorias");//Categorias
-			Thread.sleep(5000);
-			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Categorías");
-		
-	}
-	
-	
-	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
 	public void testCategorias() throws InterruptedException{
 		
 		// Dentro de la sección de /*********Categorias***********/ pruebo todos sus enlaces:
@@ -213,19 +193,6 @@ public class PruebaDeUrls {
 
 	}	
 
-	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
-	public void testMexicoCategoriasLabel() throws InterruptedException{
-		
-		// Dentro de la sección de /*********Mexico categorias***********/ pruebo todos sus enlaces:
-		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-mexico-categorias");//Mexico categorias
-			Thread.sleep(5000);
-			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "México categorías");
-
-	}	
-	
-	
-		
-	
 	///******************************/  
 	//   BEFORE SUITE Y AFTER SUITE
 	///******************************/
@@ -238,7 +205,6 @@ public class PruebaDeUrls {
 	
 		System.setProperty("webdriver.chrome.driver", "C:/Testng/chromedriver.exe");
 		//Recordar copiar el archivo .exe mencionado anteriormente en la carpeta mencionada
-		  
 		driver = new ChromeDriver();
 	  	driver.get("http://192.168.1.21:8082/mdj_test/web/");	
 	}
