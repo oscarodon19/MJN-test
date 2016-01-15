@@ -57,12 +57,15 @@ public class Breadcrumbs {
 		
 	}
 		
-
+	
+	/***
+	 * 
+	 * @BeforeSuite y @AfterSuite
+	 * 
+	 * ***/
 	
 
-	
 	@BeforeSuite
-	
 	public void beforeMethod() {
 	
 		System.setProperty("webdriver.chrome.driver", "C:/Testng/chromedriver.exe");
@@ -74,7 +77,6 @@ public class Breadcrumbs {
 	}
 
 	@AfterSuite
-	
 	public void afterMethod() {
 	
 	    driver.quit();

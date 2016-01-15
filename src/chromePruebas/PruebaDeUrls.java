@@ -191,12 +191,172 @@ public class PruebaDeUrls {
 			Thread.sleep(3000);
 			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Mexico categorias");
 
-	}	
-
-	///******************************/  
-	//   BEFORE SUITE Y AFTER SUITE
-	///******************************/
+	}
 	
+	/**********************************************
+	 ********************************************** 
+	 * Creaciones 
+	 **********************************************
+	 **********************************************/	
+	
+	/**
+	 * 
+	 *  Gastos
+	 *  
+	 ****/
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCrearGastoSancor() throws InterruptedException{
+		
+		// Crear Gasto Sancor
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ga-gastos-consolidado/create?fdv=SANCOR");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Crear gasto - Sancor");
+
+	}	
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCrearGastoBpc() throws InterruptedException{
+		
+		// Crear gasto - BPC
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ga-gastos-consolidado/create?fdv=BPC");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Crear gasto - BPC");
+
+	}
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCrearGastoAjusteManual() throws InterruptedException{
+		
+		// Crear gasto - Ajuste Manual
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ga-gastos-consolidado/create?fdv=MANUAL");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Crear gasto - Ajuste Manual");
+
+	}
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCrearGastoBudget() throws InterruptedException{
+		
+		// Crear gasto - Budget
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ga-gastos-consolidado/create?fdv=BUDGET");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Crear gasto - Budget");
+
+	}
+	
+	/**
+	 *  
+	 *  Ventas
+	 *  
+	 *   ***/
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCargarVentasSancor() throws InterruptedException{
+		
+		// Cargar Ventas Sancor
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ve-ventas-consolidado/create?fdv=SANCOR_DW");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Cargar Ventas Sancor");
+
+	}
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCargarVentasRofina() throws InterruptedException{
+		
+		// Cargar Ventas Rofina
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ve-ventas-consolidado/create?fdv=ROFINA");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Cargar Ventas Rofina");
+
+	}
+	
+	// Faltaría el de bonificaciones que no funciona la sección por ahora 14-01-16 
+	
+	/***
+	 * 
+	 * Inventario
+	 * 
+	 * ***/	
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCrearActual() throws InterruptedException{
+		
+		// Crear Actual
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-proyeccion-actual/create");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Crear Actual");
+
+	}	
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCrearBudget() throws InterruptedException{
+		
+		// Crear Budget
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/in-proyeccion-budget/create");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Crear Budget");
+
+	}
+	
+	/***
+	 * 
+	 * Maestros
+	 * 
+	 * ***/
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCrearMaestroDeProductos() throws InterruptedException{
+		
+		// Crear Maestro De Productos
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-productos-sku/create");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Crear");
+
+	}
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCrearMaestroDeMateriales() throws InterruptedException{
+		
+		// Crear Maestro de Materiales
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-materiales-bom/create");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Crear");
+
+	}
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCrearMaestrodeAlicuotasIIBB() throws InterruptedException{
+		
+		// Crear Maestro de Alicuotas IIBB
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/ve-alicuotas-iibb");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Crear");
+
+	}	
+	
+	@Test(dependsOnMethods={"testLoginUserValidoAdmin"})
+	public void testCrearMaestroDeCanales() throws InterruptedException{
+		
+		// Crear Maestro de Canales
+		driver.navigate().to("http://192.168.1.21:8082/mdj_test/web/mt-canales/create");
+			Thread.sleep(3000);
+			Assert.assertEquals((driver.findElement(By.tagName("h1")).getText()), "Crear");
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	/***
+	 * 
+	 * @BeforeSuite y @AfterSuite
+	 * 
+	 * ***/	
 	
 	
 	@BeforeSuite

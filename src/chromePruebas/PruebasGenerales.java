@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 
-public class Urls {
+public class PruebasGenerales {
 	
 	public WebDriver driver;
 
